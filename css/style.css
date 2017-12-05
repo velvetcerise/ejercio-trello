@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: #1D8DC2;
+}
+
+.header {
+  position: fixed;
+  background-color: #147AA7;
+  height: 10%;
+  width: 100%;
+}
+.trello-logo {
+  opacity: .3;
+  height: 80%;
+  margin: 5px 40%;
+}
+.bar {
+
+}
+.bar > p {
+  display: inline-block;
+  color: #fff;
+  padding: 6% 3%;
+  font-weight: bold;
+}

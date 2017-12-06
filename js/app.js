@@ -2,6 +2,8 @@
 var make = function() {
   var inputDefault = document.createElement('input');
   inputDefault.placeholder = 'Añadir una lista';
+//añadiendo clase para input default
+  inputDefault.classList.add('default-input');
   var mainSection = document.getElementById('main-section');
   mainSection.appendChild(inputDefault);
 
@@ -15,11 +17,15 @@ var make = function() {
     var formDelete = document.createElement('span');
 
     //crear atributos
-    formContainer.style.backgroundColor = 'gray';
+    //formContainer.style.backgroundColor = 'gray';
+    //definiendo estilos en css, tomando en cuenta la clase siguiente
     formContainer.classList.add('form-container');
     formInput.placeholder = 'Añadir lista dos';
     formBtn.innerText = 'Guardar';
+    //creando clase para definir estilos
+    formBtn.classList.add('save-btn');
     formDelete.innerText = 'X';
+    formDelete.classList.add('delete-btn');
 
     //agregando al HTML
     mainSection.appendChild(formContainer);
@@ -47,6 +53,8 @@ var make = function() {
       formDelete.style.display = 'none';
 
       var tasklink = document.createElement('a');
+      //añadiendo clase al link
+      tasklink.classList.add('task-link')
       var taskP = document.createElement('p');
 
       //atributos
@@ -69,6 +77,10 @@ var make = function() {
         var dltTxtArea = document.createElement('span');
 
         btnAdd.innerText = 'Añadir';
+        //reciclando clase de boton, añadiendosela a btnAdd
+        //lo mismo con dltTxtArea
+        btnAdd.classList.add('save-btn');
+        dltTxtArea.classList.add('delete-btn');
         dltTxtArea.innerText = 'X';
         formText.autofocus = true;
 
@@ -104,8 +116,5 @@ var make = function() {
   }
   //Invocar a quien queremos aplicarle el evento (¿qué evento? y ¿qué función?)
   inputDefault.addEventListener('click', itemForm);
-
-
-
 
 }
